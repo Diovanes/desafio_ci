@@ -7,4 +7,5 @@ steps:
     env: ["GOPATH=."]
   - name: "gcr.io/cloud-builders/docker"
     args: ["build", "--tag=gcr.io/$PROJECT_ID/soma", "."]
+
 images: ["gcr.io/$PROJECT_ID/soma"]
