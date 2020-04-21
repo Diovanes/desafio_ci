@@ -1,0 +1,20 @@
+steps:
+  - id: "test"
+    name: 'gcr.io/cloud-builders/go'
+    args: ["go", "test", "-v", "./src/"]
+
+  - id: "build imagem"
+    name: 'gcr.io/cloud-builders/docker'
+    args:
+    - 'build'
+    - '--build-arg'
+    - 'version=1.1.0'
+    - '-t'
+    - 'gcr.io/$PROJECT_ID/desafio-ci-test-go:latest'
+    - '-t'
+    - 'gcr.io/$PROJECT_ID/desafio-ci-test-go:1.1.0'
+    - '.'
+  - name: 'gcr.io/$PROJECT_ID/desafio-ci-test-go'
+    args: ['version']
+  images: 
+  - 'gcr.io/$PROJECT_ID/desafio-ci-test-golang'
