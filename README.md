@@ -22,4 +22,5 @@ Dicas:
 Para fazer o push da imagem, reveja o vídeo onde fazemos a instalação do docker-compose.
 Para executar os comandos Go no Cloud Build, lembre-se que o GCP fornece diversas imagens prontas para isso em seu registro público "cloud-builders"
 No cloudbuild.yaml provavelmente você deverá setar uma variável de ambiente informando o GOPATH em cada etapa. Recomendo que verifique a documentação do Cloud Build na sessão da linguagem Go.
+
 Crie uma pasta src/[nome-de-seu-projeto-ou-pacote] e coloquei seus arquivos .go nessa pasta.
